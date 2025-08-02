@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF3E41;
+    --primary: rgb(240, 104, 52);
     --secondary: #51CFED;
     --light: #F8F2F0;
     --dark: #060315;
@@ -43,6 +43,8 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+    background-color: rgb(240, 104, 52) !important;
+    ;
 }
 
 .btn-square {
@@ -96,7 +98,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -168,7 +170,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -213,6 +215,14 @@
     transition: .5s;
 }
 
+.bg-primary {
+    background-color: #FFFFFF !important;
+}
+
+.border-primary {
+    border-color: #FFFFFF !important;
+}
+
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
@@ -224,7 +234,12 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.contact-background {
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/contact_background.webp) center center no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -235,19 +250,19 @@
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -259,19 +274,19 @@
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -399,19 +414,19 @@
         max-width: 100% !important;
     }
 
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -473,4 +488,40 @@
 
 .footer .copyright a {
     color: var(--light);
+}
+
+.border-0 {
+    border-radius: 8px;
+}
+
+.adress-text {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.adress-text i {
+    margin-right: 10px;
+    /* Adjust space between the icon and text */
+}
+
+.adress-text span {
+    white-space: normal;
+    /* Ensures the address text is wrapped correctly */
+}
+
+.text-primary {
+    color: rgb(240, 104, 52) !important;
+}
+
+.page-text {
+    color: rgb(240, 104, 52) !important;
+}
+
+.submit-border{
+    border-radius: 10px;
+}
+
+.input-border
+{
+    border-radius: 15px;
 }

@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/Logo.webp" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -377,7 +377,7 @@
     <!-- Quote Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
-            <div class="row g-5 align-items-center free-qoute">
+            <div class="row g-5 align-items-center ">
                 <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
                     <h1 class="mb-5">Request A Free Qoute!</h1>
@@ -390,17 +390,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-7 submit">
+                    <script>
+                        fetch('submit.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                // Select the specific container to insert the content into
+                                const targetElement = document.querySelector('.submit');
+                                targetElement.insertAdjacentHTML('beforeend', data); // Or use 'afterbegin' to insert at the start of the container
+                            });
+                    </script>      
+                </div>
             </div>
         </div>
-        <script>
-            fetch('submit.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Select the specific container to insert the content into
-                    const targetElement = document.querySelector('.free-qoute');
-                    targetElement.insertAdjacentHTML('beforeend', data); // Or use 'afterbegin' to insert at the start of the container
-                });
-        </script>
     </div>
     <!-- Quote End -->
 
